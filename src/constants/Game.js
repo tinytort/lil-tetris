@@ -18,7 +18,10 @@ export const ActionTypes = {
     MOVE_DOWN: 'MOVE_DOWN',
     START_GAME: 'START_GAME',
     GAME_STARTED: 'GAME_STARTED',
-    NEW_BLOCK: 'NEW_BLOCK'
+    NEW_BLOCK: 'NEW_BLOCK',
+    PAUSE_GAME: 'PAUSE_GAME',
+    UNPAUSE_GAME: 'UNPAUSE_GAME',
+    GAME_OVER: 'GAME_OVER'
 };
 
 export const KeyCodes = {
