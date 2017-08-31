@@ -3,8 +3,8 @@ export const Dimensions = {
         width: 10,
         height: 16
     },
-    // what do these do???
     Square: 15,
+    // what do these do???
     NextBlock: {
         width: 6,
         height: 2
