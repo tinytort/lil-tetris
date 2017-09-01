@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { loadMenu } from '../actions/action';
 
-class Menu extends React.Component {
+class Menu extends Component {
     componentDidMount(){
         this.props.dispatch(loadMenu());
     }
