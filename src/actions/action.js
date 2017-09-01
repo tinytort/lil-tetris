@@ -3,17 +3,18 @@ import { rotateArray, checkCollisions, getCompletedLines } from '../lib/lib';
 
 export const NEW_BLOCK = 'NEW_BLOCK';
 export const ROTATE_BLOCK = 'ROTATE_BLOCK';
-export const PAUSE_GAME = 'PAUSE_GAME';
-export const UNPAUSE_GAME = 'UNPAUSE_GAME';
 export const START_GAME = 'START_GAME';
 export const STOP_GAME = 'STOP_GAME';
 export const GAME_OVER = 'GAME_OVER';
 export const CLEAR_LINE = 'CLEAR_LINE';
 export const ADD_SCORE = 'ADD_SCORE';
+export const MOVE_BLOCK = 'MOVE_BLOCK';
 export const MOVE_RIGHT = 'MOVE_RIGHT';
 export const MOVE_LEFT = 'MOVE_LEFT';
 export const MOVE_DOWN = 'MOVE_DOWN';
 export const ADD_BLOCK = 'ADD_BLOCK';
+export const PAUSE_GAME = 'PAUSE_GAME';
+export const UNPAUSE_GAME = 'UNPAUSE_GAME';
 
 export const addBlock = (currentBlock, nextBlock) => {
     const { shapesMapping } = gameConstants;
@@ -43,13 +44,13 @@ export const startGame = () => {
     };
 };
 
-export const pauseGame = () => {
+export const pauseGame = () => ({
     type: PAUSE_GAME
-};
+});
 
-export const unpauseGame = () => {
+export const unpauseGame = () => ({
     type: UNPAUSE_GAME
-};
+});
 
 export const changePauseState = () => (
     function (dispatch, getState) {
@@ -58,9 +59,9 @@ export const changePauseState = () => (
     }
 );
 
-export const gameOver = () => {
+export const gameOver = () => ({
     type: GAME_OVER
-};
+});
 
 export const addScore = (clearedLines) => ({
     type: ADD_SCORE,
@@ -68,22 +69,22 @@ export const addScore = (clearedLines) => ({
     clearedLines
 });
 
-export const moveRight = () => {
+export const moveRight = () => ({
     type: MOVE_RIGHT
-};
+});
 
-export const moveLeft = () => {
+export const moveLeft = () => ({
     type: MOVE_LEFT
-};
+});
 
-export const moveDown = () => {
+export const moveDown = () => ({
     type: MOVE_DOWN
-};
+});
 
-export const rotateRight = (rotatedBlock) => {
+export const rotateRight = (rotatedBlock) => ({
     type: ROTATE_BLOCK,
     rotatedBlock
-};
+});
 
 export const rotateBlock = () => (
     function (dispatch, getState) {
