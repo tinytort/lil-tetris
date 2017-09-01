@@ -1,4 +1,5 @@
 import React from 'react';
+import { Rect } from 'react-konva';
 import gameConstants from '../constants/gameConstants';
 
 const { blockUnit, pixelSize } = gameConstants;
