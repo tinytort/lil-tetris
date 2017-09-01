@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Banner from './Banner';
 import CurrentBlock from '../containers/CurrentBlock';
-import ActiveBlock from '../containers/ActiveBlock';
+import ActiveBlocks from '../containers/ActiveBlocks';
 import gameConstants from '../constants/gameConstants.js';
 
 

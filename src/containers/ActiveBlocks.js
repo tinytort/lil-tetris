@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import BlockList from '../components/BlockList.js';
 
 const mapStateToProps = (state) => ({
-    grid: state.activeBlock
+    grid: state.activeBlocks
 });
 
-const ActiveBlock = connect(
+const ActiveBlocks = connect(
     mapStateToProps
 )(BlockList);
 
-export default ActiveBlock;
+export default ActiveBlocks;
