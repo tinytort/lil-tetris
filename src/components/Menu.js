@@ -17,7 +17,7 @@ class Menu extends Component {
 }
 
 Menu.propTypes = {
-    isPlaying: PropTypes.string
+    isPlaying: PropTypes.bool
 };
 
 export default Menu;
