@@ -1,10 +1,14 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 
+import GameField from './GameField.js';
+import gameConstants from '../constants/gameConstants';
 
-import { KeyCodes } from '../constants/Game';
-import Action from '../actions/action';
+const { fieldWidth, fieldHeight } = gameConstants;
 
-export default class LilTetris extends Component {
-    
-}
+const LilTetris = () => (
+    <div>
+        <GameField width={fieldWidth} height={fieldHeight} />
+    </div>
+);
+
+export default LilTetris;
