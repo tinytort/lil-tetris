@@ -19,7 +19,7 @@ function getCoordinates(shape) {
 function blockGroup(xs, ys, color) {
     const arr = [];
     for (let i=0; i<xs.length; i++) {
-        arr.push(<Rect key={i} width={blockUnit} height={blockUnit} x={xs[i]} y={ys[i]} fill={color} stroke="black" strokeWidth={1} />);
+        arr.push(<Rect key={i} width={blockUnit} height={blockUnit} x={xs[i]} y={ys[i]} fill={color} stroke="black" strokeWidth={5} />);
     }
     return arr;
 }
@@ -27,7 +27,7 @@ function blockGroup(xs, ys, color) {
 const Block = ({ shape, offsetX, offsetY, color }) => {
     const coordinates = getCoordinates(shape);
     const xs = coordinates.map((coord) => (coord.x * blockUnit) + offsetX);
-    const xy = coordinates.map((coord) => (coord.y * blockUnit) + offsetY);
+    const ys = coordinates.map((coord) => (coord.y * blockUnit) + offsetY);
     return (
         <div>
             {blockGroup(xs, ys, color)}
