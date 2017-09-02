@@ -36,7 +36,8 @@ export const startGame = () => {
     const nextRandomNumber = Math.floor(Math.random() * 7);
     const currentRandomShape = shapesMapping[currentRandomNumber];
     const nextRandomShape = shapesMapping[nextRandomNumber];
-    
+    console.log('CRSHAPE', currentRandomShape);
+    console.log('NRSHAPE', nextRandomShape);
     return {
         type: START_GAME,
         currentRandomShape,
@@ -147,6 +148,7 @@ export const loadMenu = () => (
 export const loadGame = () => (
     function (dispatch, getState) {
         dispatch(startGame());
+        console.log('load game 150');
         function handleMoving(e) {
             switch(e.keyCode) {
                 case 37:

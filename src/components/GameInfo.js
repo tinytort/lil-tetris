@@ -24,7 +24,6 @@ let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOv
                     <p>{clearedLines}</p>
                 </div>
             </div>
-
         );
     }
     return null;
