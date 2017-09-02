@@ -14,7 +14,7 @@ const LilTetris = () => (
             <MenuContainer /> 
         </div>
         <GameField width={fieldWidth} height={fieldHeight} />
-        <CurrentGameInfo />
+        <div><CurrentGameInfo /></div>
     </div>
 );
 

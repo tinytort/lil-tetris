@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Rect, Group } from 'react-konva';
-import GameConstants from '../constants/gameConstants';
+import { Rect } from 'react-konva';
+import gameConstants from '../constants/gameConstants';
 
-const { blockUnit } = GameConstants;
+const { blockUnit } = gameConstants;
 
 function getCoordinates(shape) {
     const coordinates = [];
@@ -30,9 +30,9 @@ const Block = ({ shape, offsetX, offsetY, color }) => {
     const xs = coordinates.map((coord) => (coord.x * blockUnit) + offsetX);
     const ys = coordinates.map((coord) => (coord.y * blockUnit) + offsetY);
     return (
-        <Group>
+        <div>
             {blockGroup(xs, ys, color)}
-        </Group>
+        </div>
     );
 };
 

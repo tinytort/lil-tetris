@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Layer, Stage } from 'react-konva';
 import NextBlock from '../containers/NextBlock';
 import { changePauseState } from '../actions/action';
 
@@ -10,7 +11,11 @@ let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOv
                 <button onClick={() => dispatch(changePauseState())}>{ isPaused ? 'UNPAUSE' : 'PAUSE'} </button>
                 <div>
                     <h2>Next Shape</h2>
-                    <NextBlock />
+                    <Stage width={250} height={100}>
+                        <Layer>
+                            <NextBlock />
+                        </Layer>
+                    </Stage>
                 </div>
                 <div>
                     <h2>Score</h2>

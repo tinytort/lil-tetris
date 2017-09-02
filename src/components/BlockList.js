@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rect, Group } from 'react-konva';
+import { Rect } from 'react-konva';
 import gameConstants from '../constants/gameConstants';
 
 const { blockUnit, pixelSize } = gameConstants;
@@ -14,7 +14,7 @@ const BlockList = ({ grid }) => {
             }
         });
     });
-    return <Group>{ arr }</Group>;
+    return <div>{ arr }</div>;
 };
 
 export default BlockList;

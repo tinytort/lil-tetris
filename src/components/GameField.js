@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Layer, Stage } from 'react-konva';
 import Banner from './Banner';
 import CurrentBlock from '../containers/CurrentBlock';
 import ActiveBlocks from '../containers/ActiveBlocks';
@@ -12,13 +13,13 @@ let GameField = ({ isPlaying, isPaused, isGameOver }) => {
     if (isPlaying) {
         return (
             <div>
-                <div width={ fieldWidth } height={ fieldHeight }>
-                    <div>
+                <Stage width={ fieldWidth } height={ fieldHeight }>
+                    <Layer>
                         <CurrentBlock />
                         <ActiveBlocks />
-                    </div>
+                    </Layer>
                     { isPaused ? <Banner label="PAUSED" /> : null }
-                </div>
+                </Stage>
                 { isGameOver ? <Banner label="GAME OVER" /> : null }
             </div>
         );
