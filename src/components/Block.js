@@ -17,12 +17,12 @@ function getCoordinates(shape) {
     return coordinates;
 }
 
-function blockGroup(xs, ys, color) {
+function BlockGroup(xs, ys, color) {
     const arr = [];
     for (let i=0; i<xs.length; i++) {
         arr.push(<Rect key={i} width={blockUnit} height={blockUnit} x={xs[i]} y={ys[i]} fill={color} stroke="black" strokeWidth={5} />);
     }
-    return arr;
+    return <div>{ arr }</div>;
 }
 
 const Block = ({ shape, offsetX, offsetY, color }) => {
@@ -30,9 +30,7 @@ const Block = ({ shape, offsetX, offsetY, color }) => {
     const xs = coordinates.map((coord) => (coord.x * blockUnit) + offsetX);
     const ys = coordinates.map((coord) => (coord.y * blockUnit) + offsetY);
     return (
-        <div>
-            {blockGroup(xs, ys, color)}
-        </div>
+        <BlockGroup xs={xs} ys={ys} color={color} />
     );
 };
 

@@ -15,6 +15,7 @@ for (let i=0; i<gridWidth; i++) {
 const pixelSize = 30;
 
 export default {
+    pixelSize: pixelSize,
     blockUnit: pixelSize,
     fieldWidth: pixelSize * gridWidth,
     fieldHeight: pixelSize * gridHeight,
