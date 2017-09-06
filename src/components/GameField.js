@@ -12,7 +12,7 @@ const { fieldHeight, fieldWidth } = gameConstants;
 let GameField = ({ isPlaying, isPaused, isGameOver }) => {
     if (isPlaying) {
         return (
-            <div>
+            <div id="gameField">
                 <Stage width={fieldWidth} height={fieldHeight}>
                     <CurrentBlock />
                     <ActiveBlocks />

@@ -10,11 +10,13 @@ const { fieldWidth, fieldHeight } = gameConstants;
 
 const LilTetris = () => (
     <div>
-        <div>
-            <MenuContainer /> 
+        <div id="menuCont">
+            <MenuContainer />
         </div>
-        <GameField width={fieldWidth} height={fieldHeight} />
-         <CurrentGameInfo /> 
+        <div id="lilTetris">
+            <GameField width={fieldWidth} height={fieldHeight} />
+            <CurrentGameInfo />
+        </div>
     </div>
 );
 

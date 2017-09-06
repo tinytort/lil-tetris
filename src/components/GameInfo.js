@@ -8,7 +8,7 @@ import { changePauseState } from '../actions/action';
 let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOver, dispatch }) => {
     if(isPlaying) {
         return(
-            <div>
+            <div id="gameInfo">
                 {!isGameOver && <button onClick={() => dispatch(changePauseState())}>{ isPaused ? 'UNPAUSE' : 'PAUSE'} </button>}
                 <div>
                     <h2>Next Shape</h2>
