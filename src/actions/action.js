@@ -146,7 +146,6 @@ export const loadMenu = () => (
 export const loadGame = () => (
     function (dispatch, getState) {
         dispatch(startGame());
-        console.log('load game 150');
         function handleMoving(e) {
             switch(e.keyCode) {
                 case 37:
