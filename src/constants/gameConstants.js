@@ -15,6 +15,7 @@ for (let i=0; i<gridWidth; i++) {
 const pixelSize = 30;
 
 export default {
+    pixelSize: pixelSize,
     blockUnit: pixelSize,
     fieldWidth: pixelSize * gridWidth,
     fieldHeight: pixelSize * gridHeight,
@@ -24,51 +25,66 @@ export default {
     blocks: {
         I: {
             shape: [
-                    [1, 1, 1, 1]
+                    [1, 1, 1, 1],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]
             ],
-            color: 'red'
+            color: '#857e61'
         },
         J: {
             shape: [
-                    [1, 0, 0],
-                    [1, 1, 1]
+                    [1, 0, 0, 0],
+                    [1, 1, 1, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]
             ],
-            color: 'orange'
+            color: '#767522'
         },
         L: {
             shape: [
-                    [0, 0, 1],
-                    [1, 1, 1]
+                    [0, 0, 1, 0],
+                    [1, 1, 1, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]
             ],
-            color: 'yellow'
+            color: '#264027'
         },
         O: {
             shape: [
-                    [1, 1],
-                    [1, 1]
+                    [1, 1, 0, 0],
+                    [1, 1, 0, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]
             ],
-            color: 'green'
+            color: '#3f5e5a'
         },
         S: {
             shape: [
-                    [0, 1, 1],
-                    [1, 1, 0]
+                    [0, 1, 1, 0],
+                    [1, 1, 0, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]
             ],
-            color: 'blue'
+            color: '#34403a'
         },
         T: {
             shape: [
-                    [0, 1, 0],
-                    [1, 1, 1]
+                    [0, 1, 0, 0],
+                    [1, 1, 1, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]
             ],
-            color: 'indigo'
+            color: '#19647e'
         },
         Z: {
             shape: [
-                    [1, 1, 0],
-                    [0, 1, 1]
+                    [1, 1, 0, 0],
+                    [0, 1, 1, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]
             ],
-            color: 'violet'
+            color: '#56a3a6'
         }
     }, initialGrid
 }

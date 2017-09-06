@@ -1,24 +1,82 @@
-.App {
+body{
+  font-family: 'Ubuntu', sans-serif;
+  background: #FFF0BB;
+  color: #222;
+}
+
+#menuCont{
+  text-align: center;
+  background-color: #C40E1A;
+  border-top: 1px solid #C40E1A;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+#menuCont h1{
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 40px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+#menuCont h2{
+  margin-top: -7px;
+}
+
+#lilTetris{
+  display: table;
+  width: 550px;
+  margin: 0 auto;
+}
+
+#gameInfo{
+  width: 250px;
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+}
+#gameInfo button, #gameField button {
+  background: #C40E1A;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 116px;
+}
+#gameInfo button:focus, #gameField button:focus {outline: 0;}
+
+#nextShape {
+  text-align: center;
+  width: 150px;
+  margin-left: 50px;
+}
+#nextShape div {
+  display: table;
+  width: 100%;
+}
+#nextShape div div {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#gameField{
+  width: 300px;
+  display: table-cell;
+  border: 1px solid #222;
+  position: relative;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#banner {
+  position: absolute;
+  width: 300px;
+  height: 660px;
+  background: rgba(0,0,0,.8);
+  top: 0;
+  text-align: center;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#banner h1 {
+  margin-top: 300px;
+  text-align: center;
+  color: #fff;
 }
