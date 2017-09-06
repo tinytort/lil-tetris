@@ -6,7 +6,7 @@ let Banner = ({ label, dispatch }) => {
     return (
         <div>
             <h1>{label}</h1>
-            { label === 'GAME OVER' } ? 
+            { label === 'GAME OVER' ? 
                 <button onClick={()=>dispatch(startGame())}>New Game </button> : null}
         </div>
     );

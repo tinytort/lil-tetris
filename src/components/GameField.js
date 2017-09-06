@@ -13,12 +13,12 @@ let GameField = ({ isPlaying, isPaused, isGameOver }) => {
     if (isPlaying) {
         return (
             <div>
-                <Stage width={ fieldWidth } height={ fieldHeight }>
-                        <CurrentBlock />
-                        <ActiveBlocks />
-                    { isPaused ? <Banner label="PAUSED" /> : null }
+                <Stage width={fieldWidth} height={fieldHeight}>
+                    <CurrentBlock />
+                    <ActiveBlocks />
                 </Stage>
-                { isGameOver ? <Banner label="GAME OVER" /> : null }
+                {isPaused ? <Banner label="PAUSED" /> : null}
+                {isGameOver ? <Banner label="GAME OVER" /> : null}
             </div>
         );
     }
@@ -26,7 +26,7 @@ let GameField = ({ isPlaying, isPaused, isGameOver }) => {
 };
 
 const mapStateToProps = ({ gameStatus }) => ({
-    isPlaying: gameStatus !== 'IDLE', 
+    isPlaying: gameStatus !== 'IDLE',
     isPaused: gameStatus === 'PAUSED',
     isGameOver: gameStatus === 'GAME_OVER'
 });

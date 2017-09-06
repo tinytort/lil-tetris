@@ -36,8 +36,6 @@ export const startGame = () => {
     const nextRandomNumber = Math.floor(Math.random() * 7);
     const currentRandomShape = shapesMapping[currentRandomNumber];
     const nextRandomShape = shapesMapping[nextRandomNumber];
-    console.log('CRSHAPE', currentRandomShape);
-    console.log('NRSHAPE', nextRandomShape);
     return {
         type: START_GAME,
         currentRandomShape,
