@@ -4,27 +4,10 @@ body{
   color: #222;
 }
 
-#lilTetris{
-  display: table;
-  width: 550px;
-  margin: 0 auto;
-}
-
-#gameInfo{
-  width: 250px;
-  display: table-cell;
-  vertical-align: top;
-}
-
-#gameField{
-  width: 300px;
-  display: table-cell;
-}
-
 #menuCont{
   text-align: center;
-  background-color: #D41E2A;
-  border-top: 1px solid #D41E2A;
+  background-color: #C40E1A;
+  border-top: 1px solid #C40E1A;
   height: 90px;
   margin-bottom: 20px;
 }
@@ -40,4 +23,60 @@ body{
 
 #menuCont h2{
   margin-top: -7px;
+}
+
+#lilTetris{
+  display: table;
+  width: 550px;
+  margin: 0 auto;
+}
+
+#gameInfo{
+  width: 250px;
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+}
+#gameInfo button, #gameField button {
+  background: #C40E1A;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 116px;
+}
+#gameInfo button:focus, #gameField button:focus {outline: 0;}
+
+#nextShape {
+  text-align: center;
+  width: 150px;
+  margin-left: 50px;
+}
+#nextShape div {
+  display: table;
+  width: 100%;
+}
+#nextShape div div {
+  text-align: center;
+}
+
+#gameField{
+  width: 300px;
+  display: table-cell;
+  border: 1px solid #222;
+  position: relative;
+}
+
+#banner {
+  position: absolute;
+  width: 300px;
+  height: 660px;
+  background: rgba(0,0,0,.8);
+  top: 0;
+  text-align: center;
+}
+#banner h1 {
+  margin-top: 300px;
+  text-align: center;
+  color: #fff;
 }

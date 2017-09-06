@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 let Banner = ({ label, dispatch }) => {
     return (
-        <div>
+        <div id="banner">
             <h1>{label}</h1>
             { label === 'GAME OVER' ? 
                 <button onClick={()=>dispatch(startGame())}>New Game </button> : null}

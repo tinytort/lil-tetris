@@ -12,9 +12,11 @@ let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOv
                 {!isGameOver && <button onClick={() => dispatch(changePauseState())}>{ isPaused ? 'UNPAUSE' : 'PAUSE'} </button>}
                 <div>
                     <h2>Next Shape</h2>
-                    <Stage width={250} height={100}>
+                    <div id="nextShape">
+                        <Stage width={120} height={100}>
                             <NextBlock />
-                    </Stage>
+                        </Stage>
+                    </div>
                 </div>
                 <div>
                     <h2>Score</h2>

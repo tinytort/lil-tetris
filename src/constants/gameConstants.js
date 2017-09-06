@@ -30,7 +30,7 @@ export default {
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]
             ],
-            color: 'red'
+            color: '#857e61'
         },
         J: {
             shape: [
@@ -39,7 +39,7 @@ export default {
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]
             ],
-            color: 'orange'
+            color: '#767522'
         },
         L: {
             shape: [
@@ -48,7 +48,7 @@ export default {
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]
             ],
-            color: 'yellow'
+            color: '#264027'
         },
         O: {
             shape: [
@@ -57,7 +57,7 @@ export default {
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]
             ],
-            color: 'green'
+            color: '#3f5e5a'
         },
         S: {
             shape: [
@@ -66,7 +66,7 @@ export default {
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]
             ],
-            color: 'blue'
+            color: '#34403a'
         },
         T: {
             shape: [
@@ -75,7 +75,7 @@ export default {
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]
             ],
-            color: 'indigo'
+            color: '#19647e'
         },
         Z: {
             shape: [
@@ -84,7 +84,7 @@ export default {
                     [0, 0, 0, 0],
                     [0, 0, 0, 0]
             ],
-            color: 'violet'
+            color: '#56a3a6'
         }
     }, initialGrid
 }
