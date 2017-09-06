@@ -14,7 +14,6 @@ const BlockList = ({ grid }) => {
             }
         });
     });
-    console.log('Block List arr', arr);
     return <div>{ arr }</div>;
 };
 
