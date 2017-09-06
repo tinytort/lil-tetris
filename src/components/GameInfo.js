@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Layer, Stage } from 'react-konva';
+import { Stage } from './Stage';
 import NextBlock from '../containers/NextBlock';
 import { changePauseState } from '../actions/action';
+
 
 let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOver, dispatch }) => {
     if(isPlaying) {
@@ -12,9 +13,7 @@ let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOv
                 <div>
                     <h2>Next Shape</h2>
                     <Stage width={250} height={100}>
-                        <Layer>
                             <NextBlock />
-                        </Layer>
                     </Stage>
                 </div>
                 <div>

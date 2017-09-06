@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Rect } from 'react-konva';
+import { Rect } from './Stage';
 import gameConstants from '../constants/gameConstants';
 
 const { blockUnit } = gameConstants;
@@ -22,6 +22,7 @@ function BlockGroup(xs, ys, color) {
     for (let i=0; i<xs.length; i++) {
         arr.push(<Rect key={i} width={blockUnit} height={blockUnit} x={xs[i]} y={ys[i]} fill={color} stroke="black" strokeWidth={5} />);
     }
+    console.log('Block Group arr', arr);
     return <div>{ arr }</div>;
 }
 
@@ -30,7 +31,7 @@ const Block = ({ shape, offsetX, offsetY, color }) => {
     const xs = coordinates.map((coord) => (coord.x * blockUnit) + offsetX);
     const ys = coordinates.map((coord) => (coord.y * blockUnit) + offsetY);
     return (
-        <BlockGroup xs={xs} ys={ys} color={color} />
+        <div>{BlockGroup(xs, ys, color)}</div>
     );
 };
 
