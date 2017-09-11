@@ -9,7 +9,6 @@ class Menu extends Component {
     render() {
         return (
             <div>
-                <h1>Lil Tetris</h1>
                 { !this.props.isPlaying ? <h2>Press space to start</h2> : null }
             </div>
         );

@@ -7,7 +7,7 @@ import './App.css';
 // import LilTetris from './components/LilTetris';
 
 const Header = (
-  <div>
+  <div id="menuCont">
     <h1><Link to="/"> Lil Tetris </Link></h1>
   </div>
 );

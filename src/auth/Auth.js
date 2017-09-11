@@ -12,7 +12,7 @@ function Auth({ user, signin, signup, error, location }) {
     return (
         <div>
             <Switch>
-                <Route path="/auth/signin" component={() => (
+                <Route path="/" component={() => (
                     <div>
                         <p>Sign up to save scores. <Link to="/auth/signup">Sign Up</Link></p>
                         <Credentials submit={signin} />
