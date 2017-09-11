@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { getNewClearedGrid } from '../lib/lib';
 import gameConstants from '../constants/gameConstants';
 import * as actions from '../actions/action';
@@ -41,7 +40,7 @@ function nextBlock(state = {}, action) {
                 offsetX: 10,
                 offsetY: blockUnit
             };
-        default: 
+        default:
             return state;
     }
 }
@@ -59,11 +58,11 @@ function currentBlock(state = {}, action) {
         case actions.ADD_BLOCK:
             return Object.assign({}, action.nextBlock, { offsetX: blockUnit * 3, offsetY: 0 });
         case actions.MOVE_RIGHT:
-            return Object.assign({}, state, {offsetX: state.offsetX + blockUnit});
+            return Object.assign({}, state, { offsetX: state.offsetX + blockUnit });
         case actions.MOVE_LEFT:
-            return Object.assign({}, state, {offsetX: state.offsetX - blockUnit});
+            return Object.assign({}, state, { offsetX: state.offsetX - blockUnit });
         case actions.MOVE_DOWN:
-            return Object.assign({}, state, {offsetY: state.offsetY + blockUnit});
+            return Object.assign({}, state, { offsetY: state.offsetY + blockUnit });
         case actions.ROTATE_BLOCK:
             return Object.assign({}, state, { shape: action.rotatedBlock });
         default:
@@ -72,7 +71,7 @@ function currentBlock(state = {}, action) {
 }
 
 function gameScore(state = {}, action) {
-    switch(action.type) {
+    switch (action.type) {
         case actions.START_GAME:
             return {
                 points: 0,
@@ -85,12 +84,11 @@ function gameScore(state = {}, action) {
     }
 }
 
-const lilTetrisApp = combineReducers({
+
+export {
     activeBlocks,
     currentBlock,
     nextBlock,
     gameScore,
     gameStatus
-});
-
-export default lilTetrisApp;
+};
