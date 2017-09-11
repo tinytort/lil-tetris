@@ -1,17 +1,36 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { checkForToken } from './auth/actions';
+import Routes from './Routes';
 import './App.css';
-import LilTetris from './components/LilTetris';
+// import LilTetris from './components/LilTetris';
+
+const Header = (
+  <div>
+    <h1><Link to="/"> Lil Tetris </Link></h1>
+  </div>
+);
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        
-        <LilTetris />
+      <Router>
+        {Header}
+        <div className="App">
 
-      </div>
+          <Routes />
+
+        </div>
+      </Router>
     );
   }
 }
 
-export default App;
+export default connect(
+  state => ({ user: state.user }),
+  dispatch => ({
+    checkForToken() { return dispatch(checkForToken()); }
+  })
+)(App);
