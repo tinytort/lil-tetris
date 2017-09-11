@@ -26,5 +26,6 @@
   },
   "now": {
     "alias": "lil-tetris.now.sh"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }
