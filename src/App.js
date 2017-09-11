@@ -17,11 +17,13 @@ class App extends Component {
   render() {
     return (
       <Router>
-        {Header}
-        <div className="App">
+        <div>
+          {Header}
+          <div className="App">
 
-          <Routes />
+            <Routes />
 
+          </div>
         </div>
       </Router>
     );
