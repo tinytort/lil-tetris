@@ -4,12 +4,18 @@ import { Stage } from './Stage';
 import NextBlock from '../containers/NextBlock';
 import { changePauseState } from '../actions/action';
 
+// const saveScore = ({ points }) => (
+//     <div id="saveScore">
+//         <p>POINTS!!!! {points}</p>
+//     </div>
+// );
 
 let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOver, dispatch }) => {
     if(isPlaying) {
         return(
             <div id="gameInfo">
                 {!isGameOver && <button onClick={() => dispatch(changePauseState())}>{ isPaused ? 'UNPAUSE' : 'PAUSE'} </button>}
+                
                 <div>
                     <h2>Next Shape</h2>
                     <div id="nextShape">
@@ -23,6 +29,7 @@ let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOv
                     <p>{points}</p>
                     <h2>Lines</h2>
                     <p>{clearedLines}</p>
+                    {isGameOver ? <p id="saveScore">Game Over!<br />points={ points }</p> : null}
                 </div>
             </div>
         );

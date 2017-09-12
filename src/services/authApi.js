@@ -12,5 +12,8 @@ export default {
     },
     getUser(){
         return request.get('/me');
+    },
+    postScore(){
+        return request.post('/me/scores');
     }
 };

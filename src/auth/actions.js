@@ -55,3 +55,9 @@ export function signup(user) {
 export function signout(){
     return { type: actions.LOGOUT };
 }
+
+// export function postScore() {
+//     return dispatch => {
+//         authApi.postScore()
+//     }   
+// }

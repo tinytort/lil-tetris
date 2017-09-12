@@ -103,3 +103,11 @@ form label {
   text-align: center;
   color: #fff;
 }
+#saveScore {
+  border: 2px solid #C40E1A;
+  background: #ccc;
+  width: 150px;
+  margin: 10px auto;
+  padding: 5px 0;
+  text-align: center;
+}
