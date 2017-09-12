@@ -3,7 +3,17 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Auth from '../auth/Auth';
 
+const WelcomeGreeting = ({ name }) => (
+    <p>Welcome {name}!</p>
+  );
+
+
+
 function Home({user}) {
+    if(user) {
+        console.log('user', user, 'user.name', user.name);
+    }
+    
     return(
         <div id="lilTetris">
             <div id="hiScores">
@@ -12,10 +22,11 @@ function Home({user}) {
             </div>
             <div id="startGame">
                 <h2>Welcome to LilTetris</h2>
-                <Auth />
 
-                <h2>Game</h2>
-                <Link to="/game">Game</Link>
+                { user ? <WelcomeGreeting name={user.name} /> : <Auth /> }
+
+                <h2>Play Game</h2>
+                <Link to="/game">Start game &raquo;</Link>
             </div>
         </div>
     );

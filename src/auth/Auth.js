@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signin, signup } from './actions';
 import Credentials from './Credentials';
@@ -11,20 +11,15 @@ function Auth({ user, signin, signup, error, location }) {
 
     return (
         <div>
-            <Switch>
-                <Route path="/" component={() => (
-                    <div>
-                        <p>Sign up to save scores. <Link to="/auth/signup">Sign Up</Link></p>
-                        <Credentials submit={signin} />
-                    </div>
-                )} />
-                <Route path="/auth/signup" render={() => (
-                    <div>
-                        <p>Already have an account? <Link to="/auth/signin">Sign In</Link></p>
-                        <Credentials submit={signup} allowName={true} />
-                    </div>
-                )} />
-            </Switch>
+            <div>
+                <h3>Sign In</h3>
+                <Credentials submit={signin} />
+            </div>
+            <div>
+                <h3>Sign Up</h3>
+                <Credentials submit={signup} allowName={true} />
+            </div>
+            
             {error && <div>{ error }</div>}
         </div>
     );

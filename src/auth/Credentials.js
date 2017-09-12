@@ -13,6 +13,6 @@ export default({ submit, allowName = false}) => (
         {allowName && <label>name: <input name="name" /> </label>}
         <label>email: <input type="email" name="email" /> </label>
         <label>password: <input type="password" name="password" /></label>
-        <button>log in </button>
+        <button>{ allowName ? 'submit' : 'sign in' }</button>
     </form>
 );

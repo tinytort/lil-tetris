@@ -29,6 +29,11 @@ body{
   margin-top: -7px;
 }
 
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
 #lilTetris{
   display: table;
   width: 550px;
