@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect, withRouter } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { signin, signup } from './actions';
 import Credentials from './Credentials';
@@ -19,7 +19,6 @@ function Auth({ user, signin, signup, error, location }) {
                 <h3>Sign Up</h3>
                 <Credentials submit={signup} allowName={true} />
             </div>
-            
             {error && <div>{ error }</div>}
         </div>
     );
