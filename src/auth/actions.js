@@ -56,8 +56,6 @@ export function signout(){
     return { type: actions.LOGOUT };
 }
 
-// export function postScore() {
-//     return dispatch => {
-//         authApi.postScore()
-//     }   
-// }
+export function postScore(points) {
+    // postScore functionality here
+}

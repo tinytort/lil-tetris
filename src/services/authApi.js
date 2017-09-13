@@ -13,7 +13,7 @@ export default {
     getUser(){
         return request.get('/me');
     },
-    postScore(){
+    postScore(score){
         return request.post('/me/scores');
     }
 };

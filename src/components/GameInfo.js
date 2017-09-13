@@ -3,12 +3,7 @@ import { connect } from 'react-redux';
 import { Stage } from './Stage';
 import NextBlock from '../containers/NextBlock';
 import { changePauseState } from '../actions/action';
-
-// const saveScore = ({ points }) => (
-//     <div id="saveScore">
-//         <p>POINTS!!!! {points}</p>
-//     </div>
-// );
+import { postScore } from '../auth/actions';
 
 let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOver, dispatch }) => {
     if(isPlaying) {
@@ -29,7 +24,7 @@ let GameInfo = ({ points, clearedLines, nextBlock, isPlaying, isPaused, isGameOv
                     <p>{points}</p>
                     <h2>Lines</h2>
                     <p>{clearedLines}</p>
-                    {isGameOver ? <p id="saveScore">Game Over!<br />points={ points }</p> : null}
+                    {isGameOver ? dispatch(postScore(points)) : null}
                 </div>
             </div>
         );
